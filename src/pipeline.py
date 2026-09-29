@@ -28,6 +28,17 @@ best_duration = result.duration[best_index]
 best_t0 = result.transit_time[best_index]
 best_depth = result.depth[best_index]
 
+# Convert Kepler mission time (BKJD) to standard BJD
+bjd_offset = 2454833.0
+best_t0_bjd = best_t0 + bjd_offset
+radius_ratio = np.sqrt(best_depth)
+
+print(f"Best Period: {best_period:.5f} days")
+print(f"Best Duration: {best_duration:.4f} days ({best_duration * 24:.2f} hrs)")
+print(f"Best Transit Time (T0): {best_t0:.5f} BKJD | {best_t0_bjd:.5f} BJD")
+print(f"Best Depth: {best_depth:.6f} (~{best_depth * 100:.3f}%)")
+print(f"Radius Ratio (Rp/R*): {radius_ratio:.4f}")
+
 print(f"best period: {best_period}, Best Duration: {best_duration}, Best Transit Time: {best_t0}, Best Depth: {best_depth}")
 print(durations_to_try)
 
