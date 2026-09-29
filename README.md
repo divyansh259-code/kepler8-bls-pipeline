@@ -22,10 +22,10 @@ Parameters recovered directly from the BLS peak power:
 
 | Parameter | Pipeline Output | NASA Exoplanet Archive Benchmark |
 | :--- | :--- | :--- |
-| **Orbital Period ($P$)** | **3.52205 days**[cite: 1, 2] | ~3.52254 days |
-| **Transit Epoch ($T_0$)** | **BJD 121.21229**[cite: 1, 2] | BJD 2454953.7123 |
-| **Transit Duration ($\tau$)** | **0.2150 days (~5.16 hrs)**[cite: 1, 2] | ~0.13 days |
-| **Transit Depth ($\delta$)** | **~0.407% (0.004066)**[cite: 1, 2] | ~0.41% |
+| **Orbital Period ($P$)** | **3.52205 days** | ~3.52254 days |
+| **Transit Epoch ($T_0$)** | **BJD 121.21229** | BJD 2454953.7123 |
+| **Transit Duration ($\tau$)** | **0.2150 days (~5.16 hrs)** | ~0.13 days |
+| **Transit Depth ($\delta$)** | **~0.407% (0.004066)** | ~0.41% |
 | **Radius Ratio ($R_p / R_*$)** | **$\sqrt{\delta} \approx 0.0638$** | ~0.064 |
 
 ---
