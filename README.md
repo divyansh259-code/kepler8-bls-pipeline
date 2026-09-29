@@ -9,10 +9,10 @@ A photometric analysis pipeline that queries archival *Kepler* space mission obs
 The transit method detects exoplanets by measuring periodic reductions in a star's apparent brightness as an orbiting planet transits across the stellar disk. This project processes the full mission baseline of **Kepler-8** to recover the orbital and physical transit parameters of the hot Jupiter **Kepler-8b**.
 
 ### Pipeline Workflow
-1. **Photometry Retrieval:** Queries MAST via `lightkurve` for all available long-cadence (1800 s) Kepler quarters (Quarters 0–17)[cite: 1].
-2. **Pre-processing:** Stitches quarterly light curves into a continuous time series, eliminates NaN values, and normalizes baseline flux to unity[cite: 1, 2].
-3. **Period Finding:** Scans trial orbital periods ($1.0 \le P \le 10.0\text{ days}$) across 10 duration grids ($0.05 \le \tau \le 0.30\text{ days}$) using `astropy.timeseries.BoxLeastSquares`[cite: 1, 2].
-4. **Phase-Folding:** Folds the time-series flux around the derived period ($P$) and transit epoch ($T_0$) to resolve the transit profile[cite: 1, 2].
+1. **Photometry Retrieval:** Queries MAST via `lightkurve` for all available long-cadence (1800 s) Kepler quarters (Quarters 0–17).
+2. **Pre-processing:** Stitches quarterly light curves into a continuous time series, eliminates NaN values, and normalizes baseline flux to unity.
+3. **Period Finding:** Scans trial orbital periods ($1.0 \le P \le 10.0\text{ days}$) across 10 duration grids ($0.05 \le \tau \le 0.30\text{ days}$) using `astropy.timeseries.BoxLeastSquares`.
+4. **Phase-Folding:** Folds the time-series flux around the derived period ($P$) and transit epoch ($T_0$) to resolve the transit profile.
 
 ---
 
@@ -33,12 +33,12 @@ Parameters recovered directly from the BLS peak power:
 ## Visualizations
 
 ### 1. BLS Periodogram
-The periodogram displays the spectral power against trial orbital periods. The dominant peak at $P \approx 3.522\text{ days}$ identifies the planet's orbital periodicity[cite: 1, 2].
+The periodogram displays the spectral power against trial orbital periods. The dominant peak at $P \approx 3.522\text{ days}$ identifies the planet's orbital periodicity.
 
 ![BLS Periodogram](assets/bls_periodogram.png)
 
 ### 2. Phase-Folded Transit Light Curve
-Folding the 4-year dataset over the detected period and transit center aligns individual transit events into a coherent transit dip with a depth of $\approx 0.41\%$[cite: 1, 2].
+Folding the 4-year dataset over the detected period and transit center aligns individual transit events into a coherent transit dip with a depth of $\approx 0.41\%$.
 
 ![Phase-Folded Light Curve](assets/phase_folded_transit.png)
 
